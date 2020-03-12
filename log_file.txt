@@ -1,0 +1,823 @@
+2020-03-11 18:01:00 ERROR: PDOAdapter execute() error: sql=
+CREATE TABLE `person` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mother_id` int(11) DEFAULT NULL COMMENT 'id матери	',
+  `spouse_id` int(11) DEFAULT NULL COMMENT 'id супруга(супруги)',
+  `lastname` varchar(64) NOT NULL,
+  `firstname` varchar(64) NOT NULL,
+  `age` smallint(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+INSERT INTO `person` VALUES 
+(1,NULL,4,'Иванов','Иван',40),
+(2,4,NULL,'Иванов','Вася',4),
+(3,4,NULL,'Иванова','Даша',6),
+(4,NULL,1,'Иванова','Мария',32),
+(5,NULL,NULL,'Петров','Петр',46),
+(6,NULL,8,'Сидоров','Сандро',46),
+(7,NULL,NULL,'Сидорова','Елена',40),
+(8,NULL,6,'Волкова','Ксения',39),
+(9,8,NULL,'Волкова','Настя',9);
+
+
+
+PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'person' already exists in C:\xampp\htdocs\real_training\PDOAdapter.php:90
+Stack trace:
+#0 C:\xampp\htdocs\real_training\PDOAdapter.php(90): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\real_training\PDOAdapter.php(44): PDOAdapter->execute_('CREATE TABLE `p...', NULL)
+#2 C:\xampp\htdocs\real_training\StartPoint.php(13): PDOAdapter->execute('execute', 'CREATE TABLE `p...')
+#3 {main}
+2020-03-11 18:18:51 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:19:06 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:21:39 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:21:39 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:23:02 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:23:02 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:23:14 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:23:14 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:25:30 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:25:30 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:25:42 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:25:42 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:30:11 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:30:28 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:30:36 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:32:30 INFO: PDOAdapter -> selectAll() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:35:03 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) FROM person
+ $args=
+2020-03-11 18:36:38 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:36:46 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:38:14 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:38:28 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:38:33 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:39:25 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:39:29 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:42:29 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:42:33 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:42:48 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:43:31 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:43:39 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:43:43 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:44:03 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:44:09 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:44:16 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:44:16 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ?
+ $args=Array
+(
+    [0] => 40
+)
+
+2020-03-11 18:44:36 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:44:57 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:44:57 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ?
+ $args=Array
+(
+    [0] => 40
+)
+
+2020-03-11 18:45:02 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:45:08 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:45:08 ERROR: PDOAdapter selectAll() error: sql=
+
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? TOP 1
+
+args=Array
+(
+    [0] => 40
+)
+
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'TOP 1' at line 2 in C:\xampp\htdocs\real_training\PDOAdapter.php:62
+Stack trace:
+#0 C:\xampp\htdocs\real_training\PDOAdapter.php(62): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\real_training\PDOAdapter.php(40): PDOAdapter->selectAll('\r\nSELECT id, la...', Array)
+#2 C:\xampp\htdocs\real_training\StartPoint.php(24): PDOAdapter->execute('selectAll', '\r\nSELECT id, la...', Array)
+#3 {main}
+2020-03-11 18:45:36 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:45:45 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:45:45 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 40
+)
+
+2020-03-11 18:46:06 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:46:06 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=46
+2020-03-11 18:46:11 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:46:11 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:46:21 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:46:21 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 40
+)
+
+2020-03-11 18:47:13 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:47:13 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:48:08 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:48:08 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:51:02 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:51:02 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:51:02 ERROR: PDOAdapter selectAll() error: sql=
+
+UPDATE person SET age = ?
+WHERE id = ?
+
+args=Array
+(
+    [0] => 46
+    [1] => 1
+)
+
+PDOException: SQLSTATE[HY000]: General error in C:\xampp\htdocs\real_training\PDOAdapter.php:64
+Stack trace:
+#0 C:\xampp\htdocs\real_training\PDOAdapter.php(64): PDOStatement->fetchAll(5)
+#1 C:\xampp\htdocs\real_training\PDOAdapter.php(40): PDOAdapter->selectAll('\r\nUPDATE person...', Array)
+#2 C:\xampp\htdocs\real_training\StartPoint.php(29): PDOAdapter->execute('selectAll', '\r\nUPDATE person...', Array)
+#3 {main}
+2020-03-11 18:51:49 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:51:49 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id, lastname, firstname, age FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:52:31 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:52:31 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:55:29 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:55:29 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:55:29 ERROR: PDOAdapter selectAll() error: sql=
+
+SELECT firstname, lastname, age FROM person
+WHERE age = MAX(age)
+
+PDOException: SQLSTATE[HY000]: General error: 1111 Invalid use of group function in C:\xampp\htdocs\real_training\PDOAdapter.php:66
+Stack trace:
+#0 C:\xampp\htdocs\real_training\PDOAdapter.php(66): PDO->query('\r\nSELECT firstn...', 5)
+#1 C:\xampp\htdocs\real_training\PDOAdapter.php(40): PDOAdapter->selectAll('\r\nSELECT firstn...', NULL)
+#2 C:\xampp\htdocs\real_training\StartPoint.php(31): PDOAdapter->execute('selectAll', '\r\nSELECT firstn...')
+#3 {main}
+2020-03-11 18:55:43 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:55:43 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:56:17 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:56:17 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 18:56:57 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:56:57 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => stdClass Object
+        (
+            [max] => 46
+        )
+
+)
+
+2020-03-11 18:57:05 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:57:05 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => stdClass Object
+        (
+            [max] => 46
+        )
+
+)
+
+2020-03-11 18:57:54 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:57:54 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => stdClass Object
+        (
+            [max] => 46
+        )
+
+)
+
+2020-03-11 18:58:15 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:58:47 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:58:57 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 18:58:57 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:03:50 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:03:50 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:04:09 INFO: PDOAdapter -> selectOne() $sql=
+SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:04:09 INFO: PDOAdapter -> selectOne() $sql=
+SELECT id FROM person
+WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:08:41 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:08:41 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:09:51 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:09:51 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:10:01 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:10:01 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:10:30 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:10:30 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:16:02 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:16:02 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:16:08 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:16:08 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:16:13 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:16:13 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:17:26 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:17:26 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:17:32 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:17:32 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:17:57 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:17:57 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:19:00 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:19:00 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:19:41 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:19:41 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:22:56 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:22:56 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:24:29 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:24:29 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:24:32 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:24:32 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:27:22 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:27:22 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:27:46 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:27:46 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:27:56 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:27:56 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:28:23 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:28:23 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:28:27 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:28:27 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:28:37 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:28:37 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:28:57 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:28:57 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:29:04 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:29:04 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:30:26 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:30:26 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 19:30:28 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 19:30:28 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 20:13:38 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 20:13:38 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 20:14:39 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 20:14:39 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 20:14:48 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 20:14:48 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 20:15:19 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 20:15:19 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 20:15:27 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 20:15:27 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-11 20:22:52 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-11 20:22:52 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-12 15:16:16 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-12 15:16:16 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-12 15:16:19 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-12 15:16:19 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-12 15:18:44 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-12 15:18:44 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-12 15:18:47 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-12 15:18:47 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-12 15:18:49 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-12 15:18:49 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
+2020-03-12 15:18:50 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT MAX(age) AS max FROM person
+ $args=
+2020-03-12 15:18:50 INFO: PDOAdapter -> selectOne() $sql=
+    SELECT id FROM person
+    WHERE mother_id IS NULL AND age < ? LIMIT 1
+ $args=Array
+(
+    [0] => 46
+)
+
