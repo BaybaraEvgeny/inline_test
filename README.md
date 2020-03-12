@@ -1,4 +1,5 @@
-# real_training
+# Главный скрипт - StartPoint.php
+# Веб-страница - WebPage.php
 
-dfdfdfdf
+
  
